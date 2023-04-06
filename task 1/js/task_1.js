@@ -16,9 +16,8 @@ button.onclick = function () {
         display: flex;
         justify-content: space-between;
         background-color: BlanchedAlmond;
-        border: solid 2px black;
         padding: 5px 20px;
-        border-radius: 10px;
+        border-radius: 5px;
     `;
     createButton.style = `
         border-radius: 10px;

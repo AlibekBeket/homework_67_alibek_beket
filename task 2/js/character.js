@@ -30,16 +30,38 @@ $.ajax({
         let numberOfEpisode = 0
         for (i in data.episode) {
             numberOfEpisode += 1
-        }
+        };
         characterEpisode.innerText = `Number of episodes: ${numberOfEpisode}`;
         characterInfo.append(characterName, characterStatus, characterCreated,
             characterGender, characterSpecies, characterType, characterEpisode,
             characterLocation, characterOrigin
-        )
-        container.append(characterImage, characterInfo)
+        );
+        container.append(characterImage, characterInfo);
+        characterImage.style = `
+            width: 400px;
+            height: 400px;
+        `;
+        characterInfo.style = `
+            margin-left: 20px;
+        `;
+        container.style = `
+            margin: 10px;
+            color: white;
+            display: flex;
+        `;
     },
     error: function(response, status) {
     }
 });
+const homeLink = document.createElement('a');
+homeLink.innerText = `Return to Home Page`;
+homeLink.href = `http://localhost:63342/homework67/task%202/index.html`;
+homeLink.style = `
+    text-decoration: none;
+    color: BlanchedAlmond;
+    margin-left: 20px;
+    font-size: 20px;
+`;
 const body = document.getElementsByTagName('body')[0];
-body.style.backgroundColor = 'DarkSlateGray'
+body.style.backgroundColor = 'DarkSlateGray';
+body.append(homeLink);

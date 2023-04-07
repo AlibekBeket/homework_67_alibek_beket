@@ -16,10 +16,9 @@ $.ajax({
                 width: 150px;
                 height: 150px;
             `;
-            nameBlock.append(data.results[i].name)
-            characterLink.append(nameBlock)
-            imageBlock.append(characterImg)
-            characterLink.append(imageBlock)
+            nameBlock.append(data.results[i].name);
+            imageBlock.append(characterImg);
+            characterLink.append(imageBlock, nameBlock);
             nameBlock.style = `
                 margin-bottom: 10px;
             `;
@@ -27,7 +26,7 @@ $.ajax({
                 text-decoration: none;
                 color: black;
             `;
-            characterBlock.append(characterLink)
+            characterBlock.append(characterLink);
             characterBlock.style = `
                 width: 200px;
                 padding: 10px;
@@ -36,14 +35,14 @@ $.ajax({
                 display: inline-block;
                 text-align: center;
             `;
-            container.append(characterBlock)
+            container.append(characterBlock);
             container.style = `
                 margin-bottom: 100px;
             `;
-        }
+        };
     },
     error: function(response, status) {
     }
 });
 const body = document.getElementsByTagName('body')[0];
-body.style.backgroundColor = 'DarkSlateGray'
+body.style.backgroundColor = 'DarkSlateGray';

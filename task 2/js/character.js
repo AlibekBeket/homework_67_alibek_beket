@@ -62,6 +62,22 @@ homeLink.style = `
     margin-left: 20px;
     font-size: 20px;
 `;
+homeLink.onmouseover = function (event) {
+    homeLink.style = `
+        text-decoration: none;
+        color: Coral;
+        margin-left: 20px;
+        font-size: 20px;
+    `;
+};
+homeLink.onmouseout = function (event) {
+    homeLink.style = `
+        text-decoration: none;
+        color: BlanchedAlmond;
+        margin-left: 20px;
+        font-size: 20px;
+    `;
+};
 const body = document.getElementsByTagName('body')[0];
 body.style.backgroundColor = 'DarkSlateGray';
 body.append(homeLink);

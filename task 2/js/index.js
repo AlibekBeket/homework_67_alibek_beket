@@ -34,11 +34,35 @@ $.ajax({
                 background-color: Bisque;
                 display: inline-block;
                 text-align: center;
+                border-radius: 10px;
             `;
             container.append(characterBlock);
             container.style = `
                 margin-bottom: 100px;
             `;
+            characterLink.onmouseover = function (event) {
+                characterBlock.style = `
+                    background-color: Plum;
+                    color: DarkSlateGray;
+                    border-radius: 10px;
+                    width: 200px;
+                    padding: 10px;
+                    margin: 10px;
+                    display: inline-block;
+                    text-align: center;
+                `;
+            };
+            characterLink.onmouseout = function (event) {
+                characterBlock.style = `
+                    width: 200px;
+                    padding: 10px;
+                    margin: 10px;
+                    background-color: Bisque;
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: 10px;
+                `;
+            };
         };
     },
     error: function(response, status) {

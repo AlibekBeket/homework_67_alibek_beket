@@ -26,10 +26,10 @@ $.ajax({
         const characterLocation = document.createElement('p');
         characterLocation.innerText = `Location: ${data.location.name}`;
         const characterOrigin = document.createElement('p');
-        characterOrigin.innerText = `Location: ${data.origin.name}`;
-        let numberOfEpisode = 0
+        characterOrigin.innerText = `Origin: ${data.origin.name}`;
+        let numberOfEpisode = 0;
         for (i in data.episode) {
-            numberOfEpisode += 1
+            numberOfEpisode += 1;
         };
         characterEpisode.innerText = `Number of episodes: ${numberOfEpisode}`;
         characterInfo.append(characterName, characterStatus, characterCreated,
